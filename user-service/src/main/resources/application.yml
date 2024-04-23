@@ -6,13 +6,13 @@ spring:
     username: root
     password: Niu030901
     driver-class-name: com.mysql.jdbc.Driver
-  application:
-    name: user-service
-  cloud:
-    nacos:
-      server-addr: localhost:8848 # nacos的服务地址
-      discovery:
-        cluster-name: HZ #集群名称
+#  application:
+#    name: user-service
+#  cloud:
+#    nacos:
+#      server-addr: localhost:8848 # nacos的服务地址
+#      discovery:
+#        cluster-name: HZ #集群名称
 #        cluster-name: SH #集群名称
 mybatis:
   type-aliases-package: cn.itcast.user.pojo

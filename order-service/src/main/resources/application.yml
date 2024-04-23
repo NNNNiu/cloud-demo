@@ -7,7 +7,7 @@ spring:
     password: Niu030901
     driver-class-name: com.mysql.jdbc.Driver
   application: #eureka的配置
-    name: order-service
+    name: orderservice
   cloud:
     nacos:
       server-addr: localhost:8848 # nacos的服务地址

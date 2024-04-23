@@ -13,6 +13,7 @@ spring:
       server-addr: localhost:8848 # nacos的服务地址
       discovery:
         cluster-name: SH #集群名称
+        namespace: 81f4161e-2b0a-4eb8-baa0-6cc8a4b4fcfb #dev环境的命名空间
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
   configuration:

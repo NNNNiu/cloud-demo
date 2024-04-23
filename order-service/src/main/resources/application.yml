@@ -12,8 +12,8 @@ spring:
     nacos:
       server-addr: localhost:8848 # nacos的服务地址
       discovery:
-        cluster-name: SH #集群名称
-        namespace: 81f4161e-2b0a-4eb8-baa0-6cc8a4b4fcfb #dev环境的命名空间
+#        cluster-name: SH #集群名称
+#        namespace: 81f4161e-2b0a-4eb8-baa0-6cc8a4b4fcfb #dev环境的命名空间
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
   configuration:
@@ -42,4 +42,4 @@ user-service: #应用的服务名称
 ribbon:
   eager-load:
     enabled: true  #开启饥饿加载
-    clients: user-service  #指定饥饿加载的服务名称
+    clients: userservice  #指定饥饿加载的服务名称

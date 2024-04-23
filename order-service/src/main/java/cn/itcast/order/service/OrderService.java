@@ -1,8 +1,10 @@
 package cn.itcast.order.service;
 
+import cn.itcast.order.clients.UserClient;
 import cn.itcast.order.mapper.OrderMapper;
 import cn.itcast.order.pojo.Order;
 import cn.itcast.order.pojo.User;
+import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -15,7 +17,24 @@ public class OrderService {
     @Autowired
     private OrderMapper orderMapper;
 
+    @Autowired
+    private UserClient userClient;
+
+    /**
+     * feign方法
+     */
     public Order queryOrderById(Long orderId) {
+        // 1.查询订单
+        Order order = orderMapper.findById(orderId);
+        // 2.用feign远程调用
+        User user = userClient.findById(order.getUserId());
+        // 3.数据封装
+        order.setUser(user);
+        // 4.返回
+        return order;
+    }
+    //RestTemplate方法
+    /*public Order queryOrderById(Long orderId) {
         // 1.查询订单
         Order order = orderMapper.findById(orderId);
         // 2.跨服务调用
@@ -25,5 +44,5 @@ public class OrderService {
         order.setUser(user);
         // 4.返回
         return order;
-    }
+    }*/
 }

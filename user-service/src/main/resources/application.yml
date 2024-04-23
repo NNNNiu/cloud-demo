@@ -8,6 +8,9 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   application:
     name: user-service
+  cloud:
+    nacos:
+      server-addr: localhost:8848 # nacos的服务地址
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
   configuration:
@@ -17,7 +20,8 @@ logging:
     cn.itcast: debug
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:10086/eureka
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:10086/eureka

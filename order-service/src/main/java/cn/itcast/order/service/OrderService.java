@@ -1,10 +1,10 @@
 package cn.itcast.order.service;
 
-import cn.itcast.order.clients.UserClient;
+
+import cn.itcast.feign.clients.UserClient;
+import cn.itcast.feign.pojo.User;
 import cn.itcast.order.mapper.OrderMapper;
 import cn.itcast.order.pojo.Order;
-import cn.itcast.order.pojo.User;
-import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;

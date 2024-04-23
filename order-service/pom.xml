@@ -40,10 +40,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-        <!--引入httpClient依赖-->
+        <!--引入feign的api-->
         <dependency>
-            <groupId>io.github.openfeign</groupId>
-            <artifactId>feign-httpclient</artifactId>
+            <groupId>cn</groupId>
+            <artifactId>feign-api</artifactId>
+            <version>1.0</version>
         </dependency>
     </dependencies>
     <build>
